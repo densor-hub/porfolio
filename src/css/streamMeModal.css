@@ -1,0 +1,76 @@
+.streamMemModal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, .9);
+    min-height: 100vh;
+    z-index: 100;
+}
+
+.streamMemModal .content {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(0, 0, 0, .9);
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid orangered;
+}
+
+.streamMemModal .closeIcon {
+    width: fit-content;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0px;
+}
+
+.streamMemModal .content .picture {
+    height: 80px;
+    width: 80px;
+    background-image: url('../images//ror\ cover.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.streamMemModal .content .streamingPlatofrms {
+    margin-top: 30px;
+}
+
+.streamMemModal .content .streamingPlatofrms .platform {
+    height: 50px;
+    width: 200px;
+    margin: 10px 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: rgba(80, 73, 73, 0.5);
+}
+
+.streamMemModal .content .streamingPlatofrms .platform .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.streamMemModal .content .streamingPlatofrms .platform .namelink,
+.streamMemModal .content .streamingPlatofrms .platform .icon a {
+    color: white;
+    position: relative;
+    text-decoration: none;
+
+}
+
+.streamMemModal .content .streamingPlatofrms .platform .namelink .name {
+    position: relative;
+    top: 35%;
+}

@@ -1,0 +1,886 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.landing-page {
+    display: grid;
+    min-height: 590px;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(32, 31, 31);
+    color: white;
+}
+
+
+
+.landing-page .content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing-page .screen-1 {
+    overflow-x: hidden;
+}
+
+.landing-page::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(15, 14, 14);
+
+}
+
+.landing-page::-webkit-scrollbar-thumb {
+    background-color: orangered;
+}
+
+.landing-page .screen-1 {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    min-height: 700px;
+    max-height: 1000px;
+}
+
+.landing-page .screen-1 .left-side {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    color: white;
+    background-color: rgb(32, 31, 31);
+    border-right: 1px solid rgb(100, 99, 99);
+}
+
+.landing-page .screen-1 .left-side .brand-name {
+    position: relative;
+    top: 30px;
+    height: 60px;
+    width: 110px;
+    margin: 0 auto;
+
+}
+
+.landing-page .screen-1 .left-side .brand-name .top-right {
+    width: 15px;
+    height: 25px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 5px solid orangered;
+    border-right: 5px solid orangered;
+
+}
+
+.landing-page .screen-1 .left-side .brand-name .name {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: xx-large;
+}
+
+.landing-page .screen-1 .left-side .brand-name .bottom-left {
+    width: 15px;
+    height: 25px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 0px;
+    border-bottom: 5px solid orangered;
+    border-left: 5px solid orangered;
+
+}
+
+.landing-page .screen-1 .menu {
+    height: fit-content;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+
+
+}
+
+.landing-page .screen-1 .menu .menu-item {
+    height: 40px;
+    text-align: center;
+    position: relative;
+    text-align: left;
+    padding: 3px 20px;
+}
+
+.landing-page .screen-1 .menu .menu-item span {
+    margin: 0px 5px;
+}
+
+.landing-page .screen-1 .right-side {
+    color: white;
+    background-color: rgb(15, 14, 14);
+
+    position: relative;
+}
+
+.landing-page .screen-1 .right-side .right-side-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 20px;
+}
+
+.landing-page .screen-1 .right-side .article-intro {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-left: 20px;
+    font-size: large;
+
+}
+
+.landing-page .screen-1 .right-side .right-side-grid section article {
+    margin-top: 40px;
+}
+
+
+.landing-page .screen-1 .right-side .article-intro .role {
+    position: relative;
+    top: 20px;
+}
+
+.landing-page .screen-1 .right-side .article-intro .colored-text {
+    color: rgba(255, 68, 0, 0.747);
+}
+
+.landing-page .screen-1 .right-side .about-btn {
+    margin-top: 30px;
+}
+
+.landing-page .screen-1 .right-side .about-btn a {
+    border: 0px;
+    background-color: orangered;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.landing-page .screen-1 .right-side .about-btn a:hover {
+    background-color: rgba(255, 68, 0, 0.397);
+    color: white;
+}
+
+.landing-page .screen-1 .right-side .theme-colors {
+    border: 1px solid rgb(54, 54, 54);
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+    left: 15%;
+    top: 50px;
+    min-width: 150px;
+}
+
+.landing-page .screen-1 .right-side .theme-colors .title {
+    position: relative;
+    top: -10px;
+    text-align: center;
+}
+
+.landing-page .screen-1 .right-side .theme-colors .colors button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    margin: 0px 5px;
+    border: 0px;
+}
+
+.theme-colors .orange-red {
+    background-color: orangered;
+
+}
+
+.theme-colors .deep-pink {
+    background-color: rgba(201, 8, 127, 0.959);
+}
+
+.theme-colors .white {
+    background-color: yellow;
+}
+
+
+.theme-colors .ash {
+    background-color: rgb(100, 99, 99);
+}
+
+.landing-page .screen-1 .right-side .picture-container {
+    width: 80%;
+    max-width: 310px;
+    height: 450px;
+    position: relative;
+    top: -6.5vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.landing-page .screen-1 .right-side .picture-container .top-left {
+    width: 35px;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 5px solid orangered;
+    border-left: 5px solid orangered;
+}
+
+
+
+.landing-page .screen-1 .right-side .picture-container .bottom-right {
+    height: 100px;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 5px solid orangered;
+    border-right: 5px solid orangered;
+}
+
+
+
+
+
+.landing-page .screen-1 .right-side .picture-container .picture {
+    background-image: url('../images/ror\ cover.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 85%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
+.landing-page .screen-2 {
+    color: rgb(49, 47, 47);
+    background-color: rgb(228, 225, 225);
+    min-height: 500px;
+    height: 820px;
+}
+
+.landing-page .screen-2 .about-me {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing-page .screen-2 .about-me .image {
+    background-image: url('../images/ror\ cover.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+    transform: translateX(30%);
+}
+
+.landing-page .screen-2 .about-me .about-me-article {
+    width: 70%;
+    height: fit-content;
+    position: relative;
+    margin-left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing-page .screen-2 .about-me .about-me-article .heading {
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.landing-page .screen-2 .about-me .about-me-article .sub-heading {
+    margin-bottom: 10px;
+}
+
+.landing-page .screen-2 .about-me .about-me-article .sub-heading .colored-text {
+    color: orangered;
+}
+
+.landing-page .screen-2 .about-me .about-me-article .article-btn {
+    margin-top: 10px;
+}
+
+.landing-page .screen-2 .about-me .about-me-article a {
+    border: 0px;
+    background-color: orangered;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.landing-page .screen-2 .about-me .about-me-article a:hover {
+    background-color: rgba(151, 49, 12, 0.849)
+}
+
+.landing-page .screen-3 {
+    padding: 46px;
+    color: white;
+    background-color: rgb(32, 31, 31);
+}
+
+.landing-page .screen-3 .heading {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.landing-page .screen-3 .services {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    height: fit-content;
+    margin-bottom: 80px;
+}
+
+
+.landing-page .screen-3 .services .web-dev,
+.landing-page .screen-3 .services .mobile-dev,
+.landing-page .screen-3 .services .music {
+    display: inline-block;
+    width: 190px;
+    text-align: left;
+    margin: 7px 7px;
+    text-align: center;
+    padding: 30px 11px;
+    background-color: rgb(46, 45, 45);
+}
+
+
+
+.landing-page .screen-3 .services a {
+    border: 0px;
+    background-color: orangered;
+    padding: 0px 13px;
+    border-radius: 13px;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.landing-page .screen-3 .services button {
+    border: 0px;
+    background-color: orangered;
+    padding: 5px 13px;
+    border-radius: 13px;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+
+}
+
+.landing-page .screen-3 .services button:hover,
+.landing-page .screen-3 .services a:hover {
+    background-color: rgba(255, 68, 0, 0.397);
+    color: white;
+}
+
+.landing-page .screen-3 .services .web-dev .button-container {
+    margin-top: 30px;
+    height: 25px;
+}
+
+.landing-page .screen-3 .services .mobile-dev .button-container {
+    margin-top: 53px;
+}
+
+
+.landing-page .screen-3 .let-me {
+    padding: 60px;
+    text-align: center;
+    background-color: rgb(46, 45, 45);
+    position: relative;
+    top: 0.9vh;
+}
+
+.landing-page .screen-3 .let-me .contact-btn {
+    margin-top: 15px;
+}
+
+.landing-page .screen-3 .let-me a {
+    border: 0px;
+    background-color: orangered;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.landing-page .screen-3 .let-me a:hover {
+    background-color: rgba(133, 38, 4, 0.747);
+}
+
+.landing-page .screen-4 {
+    background-color: rgb(228, 225, 225);
+    color: rgb(49, 47, 47);
+    padding: 50px;
+}
+
+.landing-page .screen-4 .heading {
+    text-align: center;
+    font-size: xx-large;
+    color: black;
+}
+
+.landing-page .screen-4 .sub-heading {
+    color: rgb(190, 79, 38);
+    text-align: center;
+    color: orangered;
+}
+
+.landing-page .screen-4 .systems-i-worked-on {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.landing-page .screen-4 .systems-i-worked-on a {
+    color: white;
+    text-decoration: none;
+    background-color: orangered;
+    padding: 2px 10px;
+    border-radius: 15px;
+    font-size: small;
+    position: relative;
+    top: 10px;
+}
+
+.landing-page .screen-4 .systems-i-worked-on a:hover {
+    background-color: rgba(133, 38, 4, 0.747);
+}
+
+.systems-i-worked-on .dpos,
+.systems-i-worked-on .durationCalculator,
+.systems-i-worked-on .Asabea-engineering {
+    margin: 20px 0px;
+    padding: 20px 0px 30px 0px;
+    background-color: rgba(211, 192, 192, 0.349);
+}
+
+.landing-page .screen-5 {
+    height: 400px;
+    background-color: rgb(49, 47, 47);
+}
+
+.landing-page .screen-5 .heading {
+    font-size: xx-large;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.landing-page .screen-5 .contact {
+    width: 50%;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+
+}
+
+.landing-page .screen-5 .contact .name {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.landing-page .screen-5 .contact .phone,
+.landing-page .screen-5 .contact .email,
+.landing-page .screen-5 .contact .linkedIn {
+    width: 230px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+
+.landing-page .screen-5 .goUp {
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    color: white;
+
+}
+
+.landing-page .screen-5 .goUp a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+
+}
+
+/*****************************************************************************************************/
+
+@media all and (max-width:860px) {
+    .landing-page .screen-1 .right-side .picture-container {
+        height: 300px;
+        position: relative;
+        top: 30px;
+    }
+
+}
+
+@media all and (max-width:730px) {
+
+
+    .landing-page .screen-1 .right-side .right-side-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: 220px 200px;
+        grid-template-areas:
+            "picture"
+            "article";
+    }
+
+    .landing-page .screen-1 .right-side .picture-container {
+        grid-area: picture;
+        height: 220px;
+        margin-bottom: 10PX;
+    }
+
+    .landing-page .screen-1 .right-side .picture-container .picture {
+        height: 190px;
+    }
+
+    .landing-page .screen-1 .right-side .right-side-grid section .about-btn {
+        text-align: center;
+    }
+
+    .landing-page .screen-1 .right-side .about-btn a {
+        margin: 20px;
+    }
+
+    .landing-page .screen-1 .right-side .theme-colors {
+        margin: 0 AUTO;
+        left: 0px;
+        padding: 10px;
+
+    }
+
+    .landing-page .screen-4 .systems-i-worked-on {
+        padding: 0px 20px;
+        width: 50%;
+    }
+
+}
+
+@media all and (max-width:495px) {
+    .landing-page {
+        font-size: 14px;
+    }
+
+    .landing-page .screen-1 {
+        min-height: 850px;
+        max-height: 1000px;
+        width: 100vw;
+    }
+
+    .landing-page .screen-1,
+    .landing-page .screen-2,
+    .landing-page .screen-3,
+    .landing-page .screen-4,
+    .landing-page .screen-5 {
+        width: 100vw;
+    }
+
+    .landing-page .screen-1 .right-side .article-intro {
+        font-size: medium;
+
+    }
+
+    .landing-page .screen-1 .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-60%);
+    }
+
+
+
+    .landing-page .heading {
+        font-size: large;
+    }
+
+    .landing-page .screen-1 .left-side .brand-name {
+        width: 21vw;
+    }
+
+    .landing-page .screen-1 .left-side .brand-name .name {
+        font-size: x-large;
+
+    }
+
+    .landing-page .screen-1 .menu .menu-item {
+        padding: 0;
+        font-size: small;
+    }
+
+    .landing-page .screen-1 .right-side .right-side-grid section article {
+        position: relative;
+        top: 30px;
+    }
+
+    .landing-page .screen-1 .right-side .about-btn a {
+        margin: 20px 0px;
+        font-size: xx-small;
+        padding: 10px;
+        position: relative;
+        top: 30px;
+    }
+
+    .landing-page .screen-1 .right-side .theme-colors {
+        margin: 0 AUTO;
+        left: 0px;
+        padding: 20px;
+
+    }
+
+    .landing-page .screen-2 .about-me .image {
+        width: 90%;
+        margin: 0px;
+        position: relative;
+        right: 20%;
+    }
+
+    .landing-page .screen-3 {
+        padding: 40px 0px;
+    }
+
+    .landing-page .screen-3 .services {
+        width: 100%;
+    }
+
+    .landing-page .screen-3 .let-me {
+        width: 100vw;
+    }
+
+    .landing-page .screen-4 {
+        padding: 27vh 0px;
+        max-height: 500px;
+    }
+
+    .landing-page .screen-2 .about-me .about-me-article .heading,
+    .landing-page .screen-3 .heading,
+    .landing-page .screen-4 .heading,
+    .landing-page .screen-5 .heading {
+        font-size: 26px;
+    }
+
+    .landing-page .screen-5 .goUp a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+
+    }
+}
+
+
+@media all and (max-width:330px) {
+
+
+    .landing-page .screen-1 {
+        grid-template-columns: 25vw 75vw;
+    }
+
+    .landing-page .screen-1 .left-side .brand-name .name {
+        font-size: medium;
+    }
+
+    .landing-page .screen-1 .menu .menu-item {
+        font-size: x-small;
+    }
+
+    .landing-page .screen-1 .right-side .article-intro,
+    .landing-page .screen-1 .right-side .right-side-grid {
+        margin-left: 7px;
+    }
+
+
+
+
+    .landing-page .screen-2 .about-me .about-me-article {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .landing-page .screen-4 .systems-i-worked-on {
+        padding: 0px;
+    }
+
+    .landing-page .screen-5 .contact {
+        width: 100%;
+    }
+
+    .landing-page .screen-4 .systems-i-worked-on,
+    .landing-page .screen-3 .services .web-dev,
+    .landing-page .screen-3 .services .mobile-dev,
+    .landing-page .screen-3 .services .music {
+        width: 100vw;
+        margin: 10px 0px;
+    }
+
+    .landing-page .screen-5 .contact .phone,
+    .landing-page .screen-5 .contact .email,
+    .landing-page .screen-5 .contact .linkedIn {
+        width: 100%;
+    }
+
+
+
+}
+
+@media all and (max-width:200px) {
+    .landing-page {
+        font-size: xx-small;
+    }
+
+    .landing-page .screen-1 {
+        display: block;
+        height: fit-content;
+        background-color: rgb(32, 31, 31);
+        min-height: 560px;
+        max-height: 560px;
+        overflow-y: hidden;
+    }
+
+    .landing-page .screen-1 .left-side {
+        display: none;
+    }
+
+    .landing-page .screen-1 .right-side {
+        position: relative;
+        top: 300px
+    }
+
+    .landing-page .screen-1 .right-side .article-intro {
+        font-size: x-small;
+        margin-left: 5px;
+        top: 50px;
+        width: fit-content;
+
+    }
+
+    .landing-page .screen-1 .right-side .right-side-grid {
+        margin: 7px 1px;
+    }
+
+    .landing-page .screen-1 .right-side .right-side-grid section article {
+        margin: 0px;
+    }
+
+    .landing-page .screen-1 .right-side .picture-container {
+        height: 100px;
+        width: 100%;
+        position: relative;
+        top: 80px;
+        right: 2px;
+    }
+
+    .landing-page .screen-1 .right-side .picture-container .picture {
+        height: 80px;
+    }
+
+    .landing-page .screen-1 .right-side .picture-container .top-left,
+    .landing-page .screen-1 .right-side .picture-container .bottom-right {
+        width: 15px;
+        height: 30px;
+    }
+
+    .landing-page .screen-1 .right-side .theme-colors {
+        display: none;
+    }
+
+    .landing-page .screen-2 {
+        text-align: center;
+        max-height: 500px;
+    }
+
+    .landing-page .screen-2 .about-me {
+        display: block;
+        transform: translateY(0%);
+    }
+
+    .landing-page .screen-2 .about-me .image {
+        display: none;
+    }
+
+    .landing-page .screen-2 .about-me .about-me-article .heading,
+    .landing-page .screen-3 .heading,
+    .landing-page .screen-4 .heading,
+    .landing-page .screen-5 .heading {
+        font-size: 12px;
+    }
+
+    .landing-page .screen-2 .about-me .about-me-article .heading {
+        margin-top: 20px;
+    }
+
+    .landing-page .screen-2 .about-me .about-me-article a,
+    .landing-page .screen-3 .let-me a {
+        font-size: xx-small;
+    }
+
+    .landing-page .screen-3 .let-me {
+        padding: 60px 10px;
+    }
+
+    .landing-page .screen-4 .systems-i-worked-on a {
+        font-size: xx-small;
+        padding: 5px 2px;
+        margin: 0px;
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .landing-page .screen-4 .systems-i-worked-on button,
+    .landing-page .screen-3 .services .web-dev a,
+    .landing-page .screen-3 .services .mobile-dev a,
+    .landing-page .screen-3 .services .music button,
+    .landing-page .screen-3 .let-me button,
+    .landing-page .screen-1 .right-side .about-btn a,
+    .landing-page .screen-2 .about-me .about-me-article a {
+        margin: 10px 0px;
+        padding: 5px 2px;
+        border-radius: 0px;
+        font-size: xx-small;
+
+
+    }
+
+    .landing-page .screen-3 .services .web-dev .button-container,
+    .landing-page .screen-3 .services .mobile-dev .button-container {
+        width: 40px;
+        position: relative;
+        margin: 0 auto;
+        top: 10px;
+        right: 7vw;
+    }
+
+
+    .landing-page .screen-3 .let-me a {
+        border-radius: 0px;
+        padding: 10px 2px;
+    }
+}
