@@ -254,7 +254,7 @@
 
 
 .landing-page .screen-1 .right-side .picture-container .picture {
-    background-image: url('../images/ror\ cover.jpg');
+    background-image: url('../images/IMG_5968.jpg');
     background-size: cover;
     background-position: center;
     width: 70%;
@@ -282,7 +282,7 @@
 }
 
 .landing-page .screen-2 .about-me .image {
-    background-image: url('../images/ror\ cover.jpg');
+    background-image: url('../images/IMG_5968.jpg');
     background-size: cover;
     background-position: center;
     width: 60%;
@@ -451,9 +451,30 @@
 }
 
 .landing-page .screen-4 .systems-i-worked-on {
-    width: 30%;
     margin: 0 auto;
     text-align: center;
+}
+
+.landing-page .screen-4 .systems-i-worked-on .dpos .image {
+    background-image: url('../images/orgman.jpg');
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.landing-page .screen-4 .systems-i-worked-on .Muzica .image {
+    background-image: url('../images/muzica.jpg');
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 
 .landing-page .screen-4 .systems-i-worked-on a {
@@ -472,11 +493,11 @@
 }
 
 .systems-i-worked-on .dpos,
-.systems-i-worked-on .durationCalculator,
-.systems-i-worked-on .Asabea-engineering {
+.systems-i-worked-on .Muzica {
     margin: 20px 0px;
     padding: 20px 0px 30px 0px;
     background-color: rgba(211, 192, 192, 0.349);
+    width: 100%;
 }
 
 .landing-page .screen-5 {
@@ -577,8 +598,8 @@
     }
 
     .landing-page .screen-4 .systems-i-worked-on {
-        padding: 0px 20px;
-        width: 50%;
+
+        width: 100%;
     }
 
 }
@@ -674,7 +695,7 @@
 
     .landing-page .screen-4 {
         padding: 27vh 0px;
-        max-height: 500px;
+        max-height: fit-content;
     }
 
     .landing-page .screen-2 .about-me .about-me-article .heading,
@@ -754,6 +775,7 @@
 @media all and (max-width:200px) {
     .landing-page {
         font-size: xx-small;
+        overflow-x: scroll;
     }
 
     .landing-page .screen-1 {
@@ -814,7 +836,7 @@
 
     .landing-page .screen-2 {
         text-align: center;
-        max-height: 500px;
+        max-height: fit-content;
     }
 
     .landing-page .screen-2 .about-me {
@@ -853,6 +875,16 @@
         width: 100vw;
         border-radius: 0px;
     }
+
+    .landing-page .screen-4 .systems-i-worked-on .dpos .image,
+    .landing-page .screen-4 .systems-i-worked-on .Muzica .image {
+
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+
+    }
+
 
     .landing-page .screen-4 .systems-i-worked-on button,
     .landing-page .screen-3 .services .web-dev a,
