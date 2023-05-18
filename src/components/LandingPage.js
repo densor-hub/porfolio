@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import StreamMeModal from './StreamMeModal';
-import { FaHome, FaUser, FaComments } from 'react-icons/fa';
+import { FaHome, FaUser } from 'react-icons/fa';
 import { AiFillLinkedin, AiOutlineAlignRight } from 'react-icons/ai';
 import { MdHomeRepairService } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
@@ -20,24 +20,19 @@ const LandingPage = () => {
 
   })
 
-  const profession = useRef([["Software Developer", "Musician", "Technical Support"]])
-  const [currentProfession, setCurrentProfession] = useState()
+  const profession = useRef(["Software Developer", "Musician", "Technical Support"])
   const [iterator, setIterator] = useState(0)
-  const [timeDifference, setTimeDifference] = useState(new Date().getSeconds())
 
   //toggling role or proffession
   useEffect(() => {
-    if (iterator !== profession?.current.length) {
-      setIterator((prev) => { return prev + 1 });
-      setCurrentProfession(profession?.current[iterator])
-    }
-    if (iterator === profession?.current.length - 1) {
-      setIterator(prev => { return prev - profession?.current.length });
-    }
     setTimeout(() => {
-      setTimeDifference(new Date().getMilliseconds())
+      if (iterator < profession?.current?.length - 1) {
+        setIterator(iterator + 1)
+      } else {
+        setIterator(0)
+      }
     }, 2000);
-  }, [timeDifference, setTimeDifference, setIterator, profession?.current.length, iterator]);
+  }, [iterator])
 
   return (
     <>
@@ -76,16 +71,16 @@ const LandingPage = () => {
                 <a href='#about' style={{ color: 'white', textDecoration: 'none' }}><span>About</span></a>
               </div>
               <div className='menu-item'>
-                <a href='#services' style={{ color: 'white', textDecoration: 'none' }}> <span>{<AiOutlineAlignRight />}</span></a>
+                <a href='#services' style={{ color: 'white', textDecoration: 'none' }}> <span>{< MdHomeRepairService />}</span></a>
                 <a href='#services' style={{ color: 'white', textDecoration: 'none' }}><span>Services</span></a>
               </div>
               <div className='menu-item'>
-                <a href='#projects' style={{ color: 'white', textDecoration: 'none' }}> <span>{<MdHomeRepairService />}</span></a>
+                <a href='#projects' style={{ color: 'white', textDecoration: 'none' }}> <span>{< AiOutlineAlignRight />}</span></a>
                 <a href='#projects' style={{ color: 'white', textDecoration: 'none' }}><span>Projects</span></a>
               </div>
               <div className='menu-item'>
-                <span>{<FaComments />}</span>
-                <span>Contact</span>
+                <a href='#contact' style={{ color: 'white', textDecoration: 'none' }}> <span>{<BsFillTelephoneFill />}</span></a>
+                <a href='#contact' style={{ color: 'white', textDecoration: 'none' }}><span>Contact</span></a>
               </div>
             </div>
           </section>
@@ -111,7 +106,7 @@ const LandingPage = () => {
                           currentThemeColor.white !== "" ? { color: `${themeColors.white}` } :
                             { color: `${themeColors.orangered}` }}>
 
-                      {currentProfession}
+                      {profession?.current[iterator]}
                     </span>
                     <span className='colored-text'> </span>
                   </b>
@@ -123,19 +118,7 @@ const LandingPage = () => {
 
                 <section>
                   <article>
-                    <p>I have been developing applications with React, Node, SQL, PHP, MongoDB, for over {new Date().getFullYear() - Number(2020)} years now.</p>
-                    <p style={window?.innerWidth < 150 ? { display: 'none' } : {}}>For my personal projects <a style={currentThemeColor.orangered !== "" ? { color: `${themeColors.orangered}` } :
-                      currentThemeColor.deeppink !== "" ? { color: `${themeColors.deeppink}` } :
-                        currentThemeColor.white !== "" ? { color: `${themeColors.white}` } :
-                          { color: `${themeColors.orangered}` }} href='#projects'> click here</a></p>
-                    <p> For music, i have been in the game since 2018</p>
-
-                    <button style={window?.innerWidth > 150 ? { padding: "5px 0px" } : { display: 'none' }} onClick={(e) => { e.preventDefault(); setDisplayStreamModal(true) }}>stream my music</button>
-
-                    <p style={window?.innerWidth < 150 ? { display: 'none' } : {}}>Want to know more about my music ? <a style={currentThemeColor.orangered !== "" ? { color: `${themeColors.orangered}` } :
-                      currentThemeColor.deeppink !== "" ? { color: `${themeColors.deeppink}` } :
-                        currentThemeColor.white !== "" ? { color: `${themeColors.white}` } :
-                          { color: `${themeColors.orangered}` }} href='https://muzica.goldcoastuni.com/home?a=nana-essel-deeg' target='_blank' rel="noreferrer">Click here</a></p>
+                    <p>I have been developing applications with React, Node, SQL, PHP, MongoDB and Power Platforms for over {new Date().getFullYear() - Number(2020)} years now. For music, i have been in the game since 2018</p>
                   </article>
 
                   <div className='about-btn'><a href='#services'
@@ -249,9 +232,12 @@ const LandingPage = () => {
             </section>
 
             <section className='let-me'>
-              <div><b><p>I have Technical and field support skills</p>
+              <div>
+                <b>Additional Skills</b>
+                <p>I have Netwoking and network management skills</p>
+                <p>I have Technical and field support skills</p>
                 <p>i have general configuration and troubleshooting skills</p>
-                <p> Do not hesitate to contact me</p></b></div>
+              </div>
               <div className='contact-btn'>
                 <a href='#contact'
                   style={currentThemeColor.orangered !== "" ? { backgroundColor: `${themeColors.orangered}` } : currentThemeColor.deeppink !== "" ? { backgroundColor: `${themeColors.deeppink}` } :
@@ -275,8 +261,8 @@ const LandingPage = () => {
               <div className='Muzica'>
                 <div className='image'></div>
                 <div className='name' style={{ fontWeight: "bold", padding: "10px" }}>Muzica</div>
-                <div className='about'>Muzica is a website creator for musicians. The goal of this project is to enable musicians create their personal websites without having to to code. Muzica comes with no charges as it aims at enabling all upcoming musicians who have limited financial resources be able to still aquire websites to promote their brands without spending any amount.
-                  <p>My music website is an examplelary website created with muzica, check it out <a href='https://muzica.goldcoastuni.com/home?a=nana-essel-deeg' target='_blank' rel="noreferrer" style={{ position: "relative", top: "-1px" }}>here</a></p></div>
+                <div className='about'>Muzica is a website creator for musicians. The goal of this project is to enable musicians create their personal websites without having to to code.
+                  <p>Check out <i><a href='https://muzica.goldcoastuni.com/home?a=nana-essel-deeg' target='_blank' rel="noreferrer" style={{ position: "relative", top: "-1px", backgroundColor: 'transparent', fontWeight: 'bolder', color: 'black', textDecoration: 'underline' }}>My music website</a></i> created with muzica </p></div>
                 <div className='link'><a href='https://muzica.goldcoastuni.com' target='_blank' rel="noreferrer"
                   style={currentThemeColor.orangered !== "" ? { backgroundColor: `${themeColors.orangered}` } : currentThemeColor.deeppink !== "" ? { backgroundColor: `${themeColors.deeppink}` } :
                     currentThemeColor.white !== "" ? { backgroundColor: `${themeColors.white}`, color: "black" } :
@@ -286,7 +272,7 @@ const LandingPage = () => {
               <div className='dpos'>
                 <div className='image'></div>
                 <div className='name' style={{ padding: '10px' }}><b>OrgMan</b></div>
-                <div className='about'>OrgMan is a comprehensive organizational management software that enables organizations manage and keep track of accurate records ranging from employees, to stock and inventory, to purchases, sales, credits, debits, and many more. Orgman is a paid system and is configured for interested clients upong requests</div>
+                <div className='about'>OrgMan is a comprehensive organizational management software that enables organizations manage and keep track of accurate records ranging from employees, to stock and inventory, to purchases, sales, credits, debits, and many more. </div>
                 <div className='link'><a href='#contact'
                   style={currentThemeColor.orangered !== "" ? { backgroundColor: `${themeColors.orangered}` } : currentThemeColor.deeppink !== "" ? { backgroundColor: `${themeColors.deeppink}` } :
                     currentThemeColor.white !== "" ? { backgroundColor: `${themeColors.white}`, color: "black" } :
