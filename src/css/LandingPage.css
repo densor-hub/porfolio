@@ -457,8 +457,8 @@
 
 .landing-page .screen-4 .systems-i-worked-on .dpos .image {
     background-image: url('../images/orgman.jpg');
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,8 +468,8 @@
 
 .landing-page .screen-4 .systems-i-worked-on .Muzica .image {
     background-image: url('../images/muzica.jpg');
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -694,7 +694,6 @@
     }
 
     .landing-page .screen-4 {
-        padding: 27vh 0px;
         max-height: fit-content;
     }
 
@@ -758,7 +757,6 @@
     .landing-page .screen-3 .services .web-dev,
     .landing-page .screen-3 .services .mobile-dev,
     .landing-page .screen-3 .services .music {
-        width: 100vw;
         margin: 10px 0px;
     }
 
